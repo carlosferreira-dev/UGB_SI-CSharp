@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConceitosBasicos
 {
-    public class CalculaDesconto
+    public class AdivinharNumero
     {
-        public static double Desconto(double valor_atual, int percentual)
+        public static bool Numero(int numero_aleatorio, int numero_digitado)
         {
-            return valor_atual / 100 * percentual;
+            return numero_aleatorio == numero_digitado;
         }
     }
 }
