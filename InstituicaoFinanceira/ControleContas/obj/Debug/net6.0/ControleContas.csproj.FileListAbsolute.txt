@@ -1,0 +1,14 @@
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\bin\Debug\net6.0\ControleContas.exe
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\bin\Debug\net6.0\ControleContas.deps.json
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\bin\Debug\net6.0\ControleContas.runtimeconfig.json
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\bin\Debug\net6.0\ControleContas.dll
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\bin\Debug\net6.0\ControleContas.pdb
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\ControleContas.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\ControleContas.AssemblyInfoInputs.cache
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\ControleContas.AssemblyInfo.cs
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\ControleContas.csproj.CoreCompileInputs.cache
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\ControleContas.dll
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\refint\ControleContas.dll
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\ControleContas.pdb
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\ControleContas.genruntimeconfig.cache
+C:\GitHub\UGB_SI-CSharp\InstituicaoFinanceira\ControleContas\obj\Debug\net6.0\ref\ControleContas.dll
