@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\ControleContas.csproj": {}
+    "C:\\Github\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\ControleContas.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\ControleContas.csproj": {
+    "C:\\Github\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\ControleContas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\ControleContas.csproj",
+        "projectUniqueName": "C:\\Github\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\ControleContas.csproj",
         "projectName": "ControleContas",
-        "projectPath": "C:\\GitHub\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\ControleContas.csproj",
+        "projectPath": "C:\\Github\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\ControleContas.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\obj\\",
+        "outputPath": "C:\\Github\\UGB_SI-CSharp\\InstituicaoFinanceira\\ControleContas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
