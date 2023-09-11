@@ -9,11 +9,19 @@ namespace ControleContas
     public class Conta
     {
         //Método construtor
-        public Conta(long numero, decimal saldo) 
+        public Conta(long numero, decimal saldo, Cliente titular) 
         {
             Numero = numero;
             Saldo = saldo;
+            Titular = titular;
+            if (saldo < 10.00m)
+            {
+                Console.WriteLine("O saldo inicial não pode ser menor do que R$10.00!");
+                //Encerra o programa, preferi usar dessa forma em vez de tratar com try, catch..
+                Environment.Exit(0);
+            }
         }
+        public Cliente Titular { get; set; }
         public Conta() 
         { 
         }
@@ -22,28 +30,8 @@ namespace ControleContas
 
         public long Agencia { get; private set; }
 
-        //Usada para armazenar o valor de saldo, quando estava como Saldo entrava em loop
-        private decimal saldo;
-        public decimal Saldo
-        {
-            get
-            {
-                return saldo;
-            }
-            set
-            {
-                if (value >= 10.0m)
-                {
-                    saldo = value;
-                }
-                else
-                {
-                    Console.WriteLine("O saldo inicial não pode ser menor do que R$10.00!");
-                    //Encerra o programa
-                    Environment.Exit(0);
-                }
-            }
-        }
+        public decimal Saldo { get; set; }
+
         //Método que recebe uma tupla com saldo/numero da conta e retorna o numero de acordo com o maior saldo
         public long MaiorSaldo((decimal saldo1, long numero1) tupla1, (decimal saldo2, long numero2) tupla2)
         {
@@ -56,19 +44,31 @@ namespace ControleContas
                 return tupla2.numero2;
             }
         }
-        public void deposito(decimal valor)
+        public void Deposito(decimal valor)
         {
             if (valor > 0)
             {
                 Saldo += valor;
             }
         }
-        public void saque(decimal valor)
+        public bool Saque(decimal valor)
         {
             if (Saldo > 0 && valor <= Saldo - 0.10m)
             {
                 Saldo -= (valor + 0.10m);
+                return true;
             }
+            return false;
+        }
+        public bool Transferencia(Conta destino, decimal valor)
+        {
+            if (Saldo - valor >= 0)
+            {
+                Saldo -= valor;
+                destino.Deposito(valor);
+                return true;
+            }
+            return false;
         }
     }
 }
