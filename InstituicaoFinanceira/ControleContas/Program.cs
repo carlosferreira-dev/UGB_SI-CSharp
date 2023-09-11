@@ -8,29 +8,23 @@ int anonascimento_cliente2 = 1980;
 Banco banco = new Banco();
 Cliente cliente2 = new Cliente(nome_cliente2, cpf_cliente2,anonascimento_cliente2);
 Conta conta2 = new Conta(654321, 2341.42m, cliente2);
-Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-Console.WriteLine("Digite seu Nome para abertura da conta: ");
+Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nDigite seu Nome para abertura da conta: ");
 string nome = Console.ReadLine();
-Console.WriteLine("----------------------------------------------");
-Console.WriteLine("Digite seu ano de nascimento: ");
+Console.WriteLine("----------------------------------------------\nDigite seu ano de nascimento: ");
 int anonascimento = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("----------------------------------------------");
 Cliente cliente1 = null;
 Conta conta1 = null;
-Console.WriteLine("Digite seu CPF: ");
+Console.WriteLine("----------------------------------------------\nDigite seu CPF: ");
 string cpf = Console.ReadLine();
 if (cpf != "11122233344")
 {
     cliente1 = new Cliente(nome, cpf, anonascimento);
-    Console.WriteLine("----------------------------------------------");
-    Console.WriteLine("Digite a sua conta: ");
+    Console.WriteLine("----------------------------------------------\nDigite a sua conta: ");
     long numero_conta = Convert.ToInt64(Console.ReadLine());
-    Console.WriteLine("----------------------------------------------");
-    Console.WriteLine("Informe o valor do depósito para ser o saldo inicial: ");
+    Console.WriteLine("----------------------------------------------\nInforme o valor do depósito para ser o saldo inicial: ");
     decimal saldo = Convert.ToDecimal(Console.ReadLine());
-    Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="); ;
     conta1 = new Conta(numero_conta, saldo, cliente1);
-    Console.WriteLine($"{conta1.Titular.Nome} Seja bem vindo ao {banco.Nome}\nDados da sua conta: \nAgência: {banco.Agencia}\nConta: {conta1.Numero}\nSaldo: {conta1.Saldo}\nPara contato da agência:\nTelefone: {banco.Telefone}\nCaso queira nos visitar: \nCep: {banco.Cep}");
+    Console.WriteLine($"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n{conta1.Titular.Nome} Seja bem vindo ao {banco.Nome}\nDados da sua conta: \nAgência: {banco.Agencia}\nConta: {conta1.Numero}\nSaldo: {conta1.Saldo}\nPara contato da agência:\nTelefone: {banco.Telefone}\nCaso queira nos visitar: \nCep: {banco.Cep}");
     Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n");
 }
 else
