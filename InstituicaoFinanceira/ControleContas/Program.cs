@@ -16,8 +16,8 @@ if ((DateTime.Now.Year - anonascimento) >= 18)
         Console.WriteLine("Digite a sua conta: ");
         long numero_conta = Convert.ToInt64(Console.ReadLine());
         Console.WriteLine("Informe o valor do depósito para ser o saldo inicial: ");
-        decimal saldoinicial_conta = Convert.ToDecimal(Console.ReadLine());
-        Conta conta1 = new Conta(numero_conta, saldoinicial_conta);
+        decimal saldo = Convert.ToDecimal(Console.ReadLine());
+        Conta conta1 = new Conta(numero_conta, saldo);
         Conta conta2 = new Conta(654321, 2341.42m);
         Console.WriteLine($"Número da conta: {conta1.Numero} com saldo: {conta1.Saldo}");
         Console.WriteLine($"Número da conta: {conta2.Numero} com saldo: {conta2.Saldo}");
