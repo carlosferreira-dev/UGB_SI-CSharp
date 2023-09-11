@@ -20,6 +20,8 @@ namespace ControleContas
 
         public long Numero { get; private set; }
 
+        public long Agencia { get; private set; }
+
         //Usada para armazenar o valor de saldo, quando estava como Saldo entrava em loop
         private decimal saldo;
         public decimal Saldo
@@ -65,7 +67,7 @@ namespace ControleContas
         {
             if (Saldo > 0 && valor <= Saldo - 0.10m)
             {
-                Saldo -= valor - 0.10m;
+                Saldo -= (valor + 0.10m);
             }
         }
     }
