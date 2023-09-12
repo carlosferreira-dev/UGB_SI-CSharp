@@ -189,9 +189,15 @@ if ( cliente1 != null && conta1 != null)
 
 
 /*/
- * Se usarmos somente variáveis sem o uso da classe, teriamos 8 linhas somente com as variáveis + as operações:
+ * Se usarmos somente variáveis sem o uso da classe, teriamos várias linhas somente com as variáveis + as operações:
  * conta1
+ * nome_cliente1
+ * cpf_cliente1
+ * anonascimento_cliente2
  * conta2
+ * nome_cliente2
+ * cpf_cliente2
+ * anonascimento_cliente2
  * saldo1
  * saldo2
  * saque
