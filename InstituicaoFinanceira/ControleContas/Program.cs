@@ -135,7 +135,7 @@ if ( cliente1 != null && conta1 != null)
                 {
                     Console.WriteLine("Digite o valor que deseja sacar");
                     decimal valor = Convert.ToDecimal(Console.ReadLine());
-                    if (conta2.Saque(valor))
+                    if (conta1.Saque(valor))
                     {
                         Console.WriteLine($"Saque realizado com sucesso, novo saldo: {conta1.Saldo}");
                     }
