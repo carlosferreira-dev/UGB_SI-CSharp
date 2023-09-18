@@ -2,6 +2,11 @@
 using System.Drawing;
 using System.Text.RegularExpressions;
 
+int idade = 30;
+string saudacao = "ola";
+int idadee = 100;
+Console.WriteLine(saudacao + idadee);
+
 string nome_cliente2 = "Rosenclever";
 string cpf_cliente2 = "11122233344";
 int anonascimento_cliente2 = 1980;
@@ -151,7 +156,7 @@ if ( cliente1 != null && conta1 != null)
                     Console.WriteLine($"Digite o valor que deseja transferir para a conta {conta2.Numero} - Titular: {cliente2.Nome}");
                     decimal valor = Convert.ToDecimal(Console.ReadLine());
                     if (conta1.Transferencia(conta2, valor))
-                    {
+                        {
                         Console.WriteLine($"Transferência efetuada com sucesso, seu novo saldo é: {conta1.Saldo}\nNovo saldo da conta destino: {conta2.Saldo}");
                     }
                     else
