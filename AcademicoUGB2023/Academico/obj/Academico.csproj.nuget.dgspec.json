@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Github\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\Academico.csproj": {}
+    "C:\\GitHub\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\Academico.csproj": {}
   },
   "projects": {
-    "C:\\Github\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\Academico.csproj": {
+    "C:\\GitHub\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\Academico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Github\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\Academico.csproj",
+        "projectUniqueName": "C:\\GitHub\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\Academico.csproj",
         "projectName": "Academico",
-        "projectPath": "C:\\Github\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\Academico.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Github\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\obj\\",
+        "projectPath": "C:\\GitHub\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\Academico.csproj",
+        "packagesPath": "C:\\Users\\TI\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\UGB_SI-CSharp\\AcademicoUGB2023\\Academico\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
