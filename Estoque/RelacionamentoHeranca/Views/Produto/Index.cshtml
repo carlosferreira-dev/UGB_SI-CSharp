@@ -1,0 +1,54 @@
+﻿@model IEnumerable<RelacionamentoHeranca.Models.Produto>
+
+@{
+    ViewData["Title"] = "Estoque";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData</h1>
+
+<p>
+    <a asp-action="Create">Criar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdutoID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdutoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ProdutoID }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.ProdutoID }) |
+                    @Html.ActionLink("Deletar", "Delete", new { id = item.ProdutoID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

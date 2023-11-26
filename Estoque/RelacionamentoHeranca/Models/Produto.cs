@@ -4,23 +4,10 @@ namespace RelacionamentoHeranca.Models
 {
     public class Produto
     {
-        public long? ProdutoID { get; set; }
+        public int? ProdutoID { get; set; }
         public string Nome { get; set; }
-        public double Valor { get; set; }
+        public decimal Valor { get; set; }
         public int Quantidade { get; set; }
-    }
-    public class ProdutoPerecivel : Produto
-    {
-        public DateTime DataValidade { get; set; }
-        public string Sabor { get; set; }
-        public double Peso { get; set; }
-    }
-
-    public class ProdutoNaoPerecivel : Produto
-    {
-        public string Cor { get; set; }
-        public string Tamanho { get; set; }
-        public string Material { get; set; }
     }
 }
 
