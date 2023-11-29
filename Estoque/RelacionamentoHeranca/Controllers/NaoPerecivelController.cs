@@ -25,7 +25,7 @@ public class NaoPerecivelController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<ActionResult> Create([Bind("Nome", "Valor", "Quantidade", "DataValidade", "Sabor", "Peso")] NaoPerecivel naoperecivel)
+    public async Task<ActionResult> Create([Bind("Nome", "Valor", "Quantidade", "Cor", "Tamanho", "Material")] NaoPerecivel naoperecivel)
     {
         try
         {
@@ -59,7 +59,7 @@ public class NaoPerecivelController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(long? id, [Bind("ProdutoID", "Nome", "Valor", "Quantidade", "DataValidade", "Sabor", "Peso")] NaoPerecivel naoperecivel)
+    public async Task<IActionResult> Edit(long? id, [Bind("ProdutoID", "Nome", "Valor", "Quantidade", "Cor", "Tamanho", "Material")] NaoPerecivel naoperecivel)
     {
         if (id != naoperecivel.ProdutoID)
         {
