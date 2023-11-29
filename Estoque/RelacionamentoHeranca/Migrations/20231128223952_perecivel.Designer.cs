@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RelacionamentoHeranca.Data;
 
@@ -11,9 +12,11 @@ using RelacionamentoHeranca.Data;
 namespace RelacionamentoHeranca.Migrations
 {
     [DbContext(typeof(EstoqueContext))]
-    partial class EstoqueContextModelSnapshot : ModelSnapshot
+    [Migration("20231128223952_perecivel")]
+    partial class perecivel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,22 +56,6 @@ namespace RelacionamentoHeranca.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("RelacionamentoHeranca.Models.NaoPerecivel", b =>
-                {
-                    b.HasBaseType("RelacionamentoHeranca.Models.Produto");
-
-                    b.Property<string>("Cor")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Material")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Tamanho")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("NaoPerecivel");
-                });
-
             modelBuilder.Entity("RelacionamentoHeranca.Models.Perecivel", b =>
                 {
                     b.HasBaseType("RelacionamentoHeranca.Models.Produto");
@@ -76,8 +63,8 @@ namespace RelacionamentoHeranca.Migrations
                     b.Property<DateTime>("DataValidade")
                         .HasColumnType("datetime2");
 
-                    b.Property<float>("Peso")
-                        .HasColumnType("real");
+                    b.Property<decimal>("Peso")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Sabor")
                         .HasColumnType("nvarchar(max)");

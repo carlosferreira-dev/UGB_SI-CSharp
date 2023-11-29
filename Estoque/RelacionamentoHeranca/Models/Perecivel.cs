@@ -4,6 +4,6 @@
     {
         public DateTime DataValidade { get; set; }
         public string? Sabor { get; set; }
-        public decimal Peso { get; set; }
+        public float Peso { get; set; }
     }
 }

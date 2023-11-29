@@ -12,7 +12,7 @@ using RelacionamentoHeranca.Data;
 namespace RelacionamentoHeranca.Migrations
 {
     [DbContext(typeof(EstoqueContext))]
-    [Migration("20231126191512_initial")]
+    [Migration("20231128220317_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace RelacionamentoHeranca.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0")
+                .HasAnnotation("ProductVersion", "7.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -40,8 +40,8 @@ namespace RelacionamentoHeranca.Migrations
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Valor")
+                        .HasColumnType("float");
 
                     b.HasKey("ProdutoID");
 

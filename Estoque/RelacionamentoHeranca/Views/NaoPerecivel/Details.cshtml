@@ -1,0 +1,55 @@
+﻿@model RelacionamentoHeranca.Models.NaoPerecivel
+
+@{
+    ViewData["Title"] = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Não Perecível</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+        <dd class="col-sm-10">
+             @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+             @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd class="col-sm-10">
+             @Html.DisplayFor(model => model.Valor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+            @Html.DisplayNameFor(model => model.Cor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tamanho)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tamanho)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Material)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Material)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ProdutoID }) |
+    <a asp-action="Index">Retornar para a lista de produtos</a>
+</div>

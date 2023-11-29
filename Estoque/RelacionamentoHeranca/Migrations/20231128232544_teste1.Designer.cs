@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RelacionamentoHeranca.Data;
 
@@ -11,9 +12,11 @@ using RelacionamentoHeranca.Data;
 namespace RelacionamentoHeranca.Migrations
 {
     [DbContext(typeof(EstoqueContext))]
-    partial class EstoqueContextModelSnapshot : ModelSnapshot
+    [Migration("20231128232544_teste1")]
+    partial class teste1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,22 +54,6 @@ namespace RelacionamentoHeranca.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Produto");
 
                     b.UseTphMappingStrategy();
-                });
-
-            modelBuilder.Entity("RelacionamentoHeranca.Models.NaoPerecivel", b =>
-                {
-                    b.HasBaseType("RelacionamentoHeranca.Models.Produto");
-
-                    b.Property<string>("Cor")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Material")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Tamanho")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("NaoPerecivel");
                 });
 
             modelBuilder.Entity("RelacionamentoHeranca.Models.Perecivel", b =>

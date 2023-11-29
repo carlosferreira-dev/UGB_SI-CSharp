@@ -1,20 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelacionamentoHeranca.Data;
+using RelacionamentoHeranca.Migrations;
 using RelacionamentoHeranca.Models;
 using System.Linq;
 
-public class ProdutoController : Controller
+public class NaoPerecivelController : Controller
 {
     private readonly EstoqueContext _context;
 
-    public ProdutoController(EstoqueContext context)
+    public NaoPerecivelController(EstoqueContext context)
     {
         _context = context;
     }
     public async Task<IActionResult> Index()
     {
-        return View(await _context.Produtos.OrderBy(i => i.Nome).ToListAsync());
+        return View(await _context.NaoPereciveis.OrderBy(i => i.Nome).ToListAsync());
     }
 
     public IActionResult Create()
@@ -24,13 +25,13 @@ public class ProdutoController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<ActionResult> Create([Bind("Nome", "Valor", "Quantidade")] Produto produto)
+    public async Task<ActionResult> Create([Bind("Nome", "Valor", "Quantidade", "DataValidade", "Sabor", "Peso")] NaoPerecivel naoperecivel)
     {
         try
         {
             if (ModelState.IsValid)
             {
-                _context.Add(produto);
+                _context.Add(naoperecivel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
@@ -39,7 +40,7 @@ public class ProdutoController : Controller
         {
             ModelState.AddModelError("", "Não foi possível cadastrar ");
         }
-        return View(produto);
+        return View(naoperecivel);
     }
 
     public async Task<ActionResult> Edit(long id)
@@ -48,19 +49,19 @@ public class ProdutoController : Controller
         {
             return NotFound();
         }
-        var produto = await _context.Produtos.SingleOrDefaultAsync(i => i.ProdutoID == id);
-        if (produto == null)
+        var naoperecivel = await _context.NaoPereciveis.SingleOrDefaultAsync(i => i.ProdutoID == id);
+        if (naoperecivel == null)
         {
             return NotFound();
         }
-        return View(produto);
+        return View(naoperecivel);
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(long? id, [Bind("ProdutoID", "Nome", "Valor", "Quantidade")] Produto produto)
+    public async Task<IActionResult> Edit(long? id, [Bind("ProdutoID", "Nome", "Valor", "Quantidade", "DataValidade", "Sabor", "Peso")] NaoPerecivel naoperecivel)
     {
-        if (id != produto.ProdutoID)
+        if (id != naoperecivel.ProdutoID)
         {
             return NotFound();
         }
@@ -68,12 +69,12 @@ public class ProdutoController : Controller
         {
             try
             {
-                _context.Update(produto);
+                _context.Update(naoperecivel);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (!ProdutoExists(produto.ProdutoID))
+                if (!NaoPerecivelExists(naoperecivel.ProdutoID))
                 {
                     return NotFound();
                 }
@@ -84,13 +85,13 @@ public class ProdutoController : Controller
             }
             return RedirectToAction("Index");
         }
-        return View(produto);
+        return View(naoperecivel);
     }
 
-    private bool ProdutoExists(long? produtoID)
+    private bool NaoPerecivelExists(long? produtoID)
     {
-        var produto = _context.Produtos.FirstOrDefault(i => i.ProdutoID == produtoID);
-        if (produto == null)
+        var naoperecivel = _context.NaoPereciveis.FirstOrDefault(i => i.ProdutoID == produtoID);
+        if (naoperecivel == null)
             return false;
         return true;
     }
@@ -100,12 +101,12 @@ public class ProdutoController : Controller
         {
             return NotFound();
         }
-        var produto = await _context.Produtos.SingleOrDefaultAsync(i => i.ProdutoID == id);
-        if (produto == null)
+        var naoperecivel = await _context.NaoPereciveis.SingleOrDefaultAsync(i => i.ProdutoID == id);
+        if (naoperecivel == null)
         {
             return NotFound();
         }
-        return View(produto);
+        return View(naoperecivel);
     }
     public async Task<IActionResult> Delete(long? id)
     {
@@ -113,44 +114,22 @@ public class ProdutoController : Controller
         {
             return NotFound();
         }
-        var produto = await _context.Produtos.SingleOrDefaultAsync(i => i.ProdutoID == id);
-        if (produto == null)
+        var naoperecivel = await _context.NaoPereciveis.SingleOrDefaultAsync(i => i.ProdutoID == id);
+        if (naoperecivel == null)
         {
             return NotFound();
         }
-        return View(produto);
+        return View(naoperecivel);
     }
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(long? id)
     {
-        var produto = await _context.Produtos.SingleOrDefaultAsync(i => i.ProdutoID == id);
-        _context.Produtos.Remove(produto);
+        var naoperecivel = await _context.NaoPereciveis.SingleOrDefaultAsync(i => i.ProdutoID == id);
+        _context.Produtos.Remove(naoperecivel);
         await _context.SaveChangesAsync();
         return RedirectToAction("Index");
     }
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*public IActionResult Index()
-{
-    var produtos = _context.Produtos.Include(p => p is NaoPerecivel ? ((NaoPerecivel)p) : null)
-                                    .Include(p => p is Perecivel ? ((Perecivel)p) : null)
-                                    .ToList();
-    return View(produtos);
-}*/

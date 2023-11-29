@@ -1,17 +1,17 @@
-﻿@model RelacionamentoHeranca.Models.Produto
+﻿@model RelacionamentoHeranca.Models.NaoPerecivel
 
 @{
-    ViewData["Title"] = "Criar";
+    ViewData["Title"] = "Editar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@ViewData</h1>
+<h1>@ViewData["Title"]</h1>
 
-<h4>Produto</h4>
+<h4>Não Perecível</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
@@ -29,14 +29,31 @@
                 <span asp-validation-for="Quantidade" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Criar" class="btn btn-primary" />
+                <label asp-for="Cor" class="control-label"></label>
+                <input asp-for="Cor" class="form-control" />
+                <span asp-validation-for="Cor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tamanho" class="control-label"></label>
+                <input asp-for="Tamanho" class="form-control" />
+                <span asp-validation-for="Tamanho" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Material" class="control-label"></label>
+                <input asp-for="Material" class="form-control" />
+                <span asp-validation-for="Material" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="ProdutoID" />
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Voltar</a>
+    <a asp-action="Index">Retornar para a lista de produtos</a>
 </div>
 
 @section Scripts {

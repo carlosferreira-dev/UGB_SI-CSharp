@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RelacionamentoHeranca.Models.Perecivel>
+
+@{
+    ViewData["Title"] = "Perecível";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Criar novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataValidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sabor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peso)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataValidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sabor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peso)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ProdutoID }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.ProdutoID }) |
+                @Html.ActionLink("Deletar", "Delete", new { id = item.ProdutoID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

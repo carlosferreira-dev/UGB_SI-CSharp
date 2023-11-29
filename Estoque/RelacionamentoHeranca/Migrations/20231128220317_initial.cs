@@ -17,7 +17,7 @@ namespace RelacionamentoHeranca.Migrations
                     ProdutoID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Valor = table.Column<double>(type: "float", nullable: false),
                     Quantidade = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
