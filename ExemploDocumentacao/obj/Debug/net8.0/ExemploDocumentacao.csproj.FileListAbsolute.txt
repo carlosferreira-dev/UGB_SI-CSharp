@@ -1,0 +1,15 @@
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\bin\Debug\net8.0\ExemploDocumentacao.exe
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\bin\Debug\net8.0\ExemploDocumentacao.deps.json
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\bin\Debug\net8.0\ExemploDocumentacao.runtimeconfig.json
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\bin\Debug\net8.0\ExemploDocumentacao.dll
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\bin\Debug\net8.0\ExemploDocumentacao.pdb
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ExemploDocumentacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ExemploDocumentacao.AssemblyInfoInputs.cache
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ExemploDocumentacao.AssemblyInfo.cs
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ExemploDocumentacao.csproj.CoreCompileInputs.cache
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ExemploDocumentacao.sourcelink.json
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ExemploDocumentacao.dll
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\refint\ExemploDocumentacao.dll
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ExemploDocumentacao.pdb
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ExemploDocumentacao.genruntimeconfig.cache
+C:\Github\UGB_SI-CSharp\ExemploDocumentacao\obj\Debug\net8.0\ref\ExemploDocumentacao.dll
